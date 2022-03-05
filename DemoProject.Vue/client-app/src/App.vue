@@ -1,38 +1,38 @@
 <template>
-	<a-layout>
-		<a-layout-sider id="components-layout-demo-custom-trigger" v-model:collapsed="collapsed" :trigger="null" collapsible>
+	<ALayout>
+		<ALayoutSider id="components-layout-demo-custom-trigger" v-model:collapsed="collapsed" :trigger="null" collapsible>
 			<div class="logo" />
-			<a-menu :default-selected-keys="['/']" :selected-keys="[$route.path]" theme="dark" mode="inline">
-				<a-menu-item key="1">
-					<router-link to="/">
-						<home-outlined class="me-1" />
+			<AMenu :default-selected-keys="['/']" :selected-keys="[$route.path]" theme="dark" mode="inline">
+				<AMenuItem key="1">
+					<RouterLink to="/">
+						<HomeOutlined class="me-1" />
 						<span>
 							Home
 						</span>
-					</router-link>
-				</a-menu-item>
-				<a-menu-item key="2">
-					<router-link to="/about">
-						<video-camera-outlined class="me-1" />
+					</RouterLink>
+				</AMenuItem>
+				<AMenuItem key="2">
+					<RouterLink to="/about">
+						<VideoCameraOutlined class="me-1" />
 						<span>
 							About
 						</span>
-					</router-link>
-				</a-menu-item>
-			</a-menu>
-		</a-layout-sider>
-		<a-layout>
-			<a-layout-header class="ps-4" style="background: #fff;">
-				<menu-unfold-outlined v-if="collapsed"
+					</RouterLink>
+				</AMenuItem>
+			</AMenu>
+		</ALayoutSider>
+		<ALayout>
+			<ALayoutHeader class="ps-4" style="background: #fff;">
+				<MenuUnfoldOutlined v-if="collapsed"
 					class="trigger"
 					@click="() => (collapsed = !collapsed)" />
-				<menu-fold-outlined v-else class="trigger" @click="() => (collapsed = !collapsed)" />
-			</a-layout-header>
-			<a-layout-content :style="{ margin: '24px 16px', padding: '24px', background: '#fff', minHeight: '280px' }">
-				<router-view />
-			</a-layout-content>
-		</a-layout>
-	</a-layout>
+				<MenuFoldOutlined v-else class="trigger" @click="() => (collapsed = !collapsed)" />
+			</ALayoutHeader>
+			<ALayoutContent :style="{ margin: '24px 16px', padding: '24px', background: '#fff', minHeight: '280px' }">
+				<RouterView />
+			</ALayoutContent>
+		</ALayout>
+	</ALayout>
 </template>
 
 <script lang="ts" src="./app.ts"></script>

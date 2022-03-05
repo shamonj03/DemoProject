@@ -16,7 +16,11 @@ module.exports = {
 		"no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
 		"indent": ["error", "tab"],
 		"vue/script-indent": ["error", "tab", { "baseIndent": 1 }],
-		"vue/html-indent": ["error", "tab", { "baseIndent": 1 }]
+		"vue/html-indent": ["error", "tab", { "baseIndent": 1 }],
+		"vue/component-name-in-template-casing": ["error", "PascalCase", {
+			"registeredComponentsOnly": false,
+			"ignores": []
+		}]
 	},
 	overrides: [
 		{
