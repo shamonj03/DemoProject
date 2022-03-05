@@ -18,4 +18,15 @@ module.exports = {
 		"vue/script-indent": ["error", "tab", { "baseIndent": 1 }],
 		"vue/html-indent": ["error", "tab", { "baseIndent": 1 }]
 	},
+	overrides: [
+		{
+			files: [
+				'**/__tests__/*.{j,t}s?(x)',
+				'**/tests/unit/**/*.spec.{j,t}s?(x)'
+			],
+			env: {
+				jest: true
+			}
+		}
+	]
 };
