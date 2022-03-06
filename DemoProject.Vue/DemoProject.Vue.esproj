@@ -5,8 +5,7 @@
   <PropertyGroup>
     <SpaRoot>./client-app</SpaRoot>
     <StartupCommandWorkingDirectory>./client-app</StartupCommandWorkingDirectory>
-    <StartupCommand>npm run serve</StartupCommand>
-    <JavaScriptTestRoot>.\tests</JavaScriptTestRoot>
+    <StartupCommand>npm run dev</StartupCommand>
     <JavaScriptTestFramework>Jest</JavaScriptTestFramework>
   </PropertyGroup>
   <ItemGroup>
