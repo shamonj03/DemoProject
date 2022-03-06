@@ -23,7 +23,7 @@ namespace DemoProject.Api
                 options.AddPolicy("CorsPolicy", builder =>
                 {
                     builder
-                        .WithOrigins("http://localhost:8080")
+                        .WithOrigins("http://localhost:3000")
                         .AllowAnyMethod()
                         .AllowAnyHeader();
                 });
